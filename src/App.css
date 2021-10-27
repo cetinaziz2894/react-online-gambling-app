@@ -54,8 +54,16 @@
   margin-top: 1rem !important;
 }
 
+.mt-2{
+  margin-top: 2rem !important;
+}
+
 .mb-05{
   margin-bottom: 0.5rem !important;
+}
+
+.mb-2{
+  margin-bottom: 2rem !important;
 }
 
 .profile_image > img{
@@ -73,3 +81,4 @@
   margin-left: auto;
   margin-right: auto;
 }
+

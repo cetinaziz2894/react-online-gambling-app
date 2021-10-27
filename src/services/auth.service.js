@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { setMessage } from "../actions/message";
 
-const API_URL = "http://localhost:3001/";
+const API_URL = "https://casino-json-server.herokuapp.com/";
 
 const login = (username, password) => {
     const requestOptions = {

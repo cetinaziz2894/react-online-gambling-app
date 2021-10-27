@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { Redirect } from 'react-router-dom';
 import { Form, Header, Button, Loader, Message, Item } from "semantic-ui-react";
 import "../assets/auth.css";
-import { login } from "../actions/auth";
 import { setMessage } from "../actions/message";
 
 export default function Login(props) {
@@ -52,17 +51,19 @@ export default function Login(props) {
       e.preventDefault();
       setLoading(true);
       if (handleValidation()) {
-          dispatch(login(username, password))
-            .then(() => {
-              props.history.push("/home");
-              window.location.reload();
-            })
-            .catch(() => {
-              setLoading(false);
-            });
+        if (username === "test" && password === "1q2w3e") {
+          localStorage.setItem("user", JSON.stringify({
+            name: 'Test Awesome',
+            avatar: 'images/avatar/rebecka.jpg',
+            event: 'Last seen gambling on Starburst.'
+          }));
+          localStorage.setItem("username", username);
+          props.history.push("/home");
+          window.location.reload();
         } else {
           setLoading(false);
         }
+      }
     };
   
     if (isLoggedIn) {
@@ -72,7 +73,7 @@ export default function Login(props) {
         <div className="auth-main">
             <div className="auth-content">
                 <div className="auth-card">
-                    <Item.Image  textalign={'right'} size='medium' src={process.env.PUBLIC_URL +"images/logo.svg"} />
+                    <Item.Image  textalign={'right'} size='medium' src={process.env.PUBLIC_URL +"images/react_redux.png"} />
                     <Header as="h2" color="teal" textalign="center">
                         Log in
                     </Header>

@@ -1,7 +1,7 @@
 import {GET_GAMES, FILTER_GAMES, GET_CATEGORIES, SET_MESSAGE, SEARCH_GAMES} from './types'
 
 export const getGames = () => (dispatch) => {
-    return fetch("http://localhost:3001/games")
+    return fetch("https://casino-json-server.herokuapp.com/games")
           .then(res => res.json())
           .then(
             (result) => {
@@ -28,7 +28,7 @@ export const getGames = () => (dispatch) => {
 }
 
 export const getCategories = () => (dispatch) => {
-    return fetch("http://localhost:3001/categories")
+    return fetch("https://casino-json-server.herokuapp.com/categories")
           .then(res => res.json())
           .then(
             (result) => {

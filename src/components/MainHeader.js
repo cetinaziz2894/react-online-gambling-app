@@ -1,17 +1,14 @@
 import React from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import SearchBar from './shared/SearchBar';
 import { Button, Grid, Icon, Item } from 'semantic-ui-react';
 
-import { logout } from "../actions/auth";
-
-export default function MainHeader() {
-
-    const dispatch = useDispatch();
+export default function MainHeader(props) {
     const {user} = useSelector((state) => state.auth);
     const logOutHandler = () => {
-        const username = localStorage.getItem('username');
-        dispatch(logout(username));
+        localStorage.removeItem("user");
+        localStorage.removeItem("username");
+        window.location = window.location.origin+'/login';
       };
 
     return (
