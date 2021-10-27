@@ -29,50 +29,9 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Project Overview
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-Applicant's test for Javascript coders.
-
-## Assignment Overview
-
-The assignment is to use Javascript to tie together existing HTML and data to create a minimal, working casino website.
+The project is to use Javascript to tie together existing HTML and data to create a minimal, working casino website.
 
 Basic HTML, CSS, images and JSON data is provided, however, feel free to impress by changing and enhancing any of these parts for an even better experience!
 
@@ -117,91 +76,14 @@ These parts needs all to be completed for the assignment to be complete:
 * Load the selected game via the provided API
 * Provide a way to go back to the Games list screen
 
-### Setup mock api
-```javascript
-npm install -g json-server
-```
-
-```javascript
-json-server --watch mock/mock-data.json --port 3001 --middlewares mock/mock-api.js
-```
-
-## API
-There are four methods on the API: login, logout, games, and categories.
-
 ### Login
-Path: /login
-
 Will give you player information.
 It is possible to login with three accounts:
-
+Login test user info:
 ```
-username: rebecka
-password: secret
-
-username: eric
-password: dad
-
-username: stoffe
-password: rock
+username: test
+password: 1q2w3e
 ```
-
-##### Request
-```javascript
-fetch('http://localhost:3001/login', {
-            method: 'post',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: 'rebecka',
-                password: 'secret'
-            })
-        }
-);
-```
-
-##### Response
-```javascript
-{
-	status: 'success',
-	player: {
-            name: 'Rebecka Awesome',
-            avatar: 'images/avatar/rebecka.jpg',
-            event: 'Last seen gambling on Starburst.'            
-    }
-}
-```
-
-### Log out
-Path: /logout
-
-Use the current player's username.
-
-##### Request
-```javascript
-fetch('http://localhost:3001/logout', {
-            method: 'post',
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({
-                username: 'rebecka'
-            })
-        }
-);
-```
-
-### Games and Categories
-These methods are located on paths /games and /categories.
-
-Please explore the response of these methods.
-```javascript
-fetch('http://localhost:3001/games', { method: 'get' });
-```
-
 
 ## Loading a game
 
@@ -213,17 +95,4 @@ comeon.game.launch('starburst');
 
 It basically takes a game code as an in parameter.
 The div with id game-launch will be replaced with an object tag that loads the game.
-
-## More info
-
-- Use of React is encouraged.
-- Use of [jQuery](https://jquery.com/) is discouraged. 
-- External libraries used in this test: [Semantic UI](http://semantic-ui.com/), [json-server](https://github.com/typicode/json-server)
-
-## Found a bug?
-
-Pull requests welcome, and maybe [we have a job for you](http://jobs.comeon.com/)? :)
-
-## How to Submit the Home Assignment
-We would prefer that you push the code to a git repo and send us the link, but you could also send us your code in a compressed file in an email.
 
