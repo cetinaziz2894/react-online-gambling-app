@@ -1,25 +1,50 @@
-# Getting Started with Create React App
+# Getting Started with React Online Gambling App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a demo project for online casino. In this app you can play games. 
+
+The app link : https://zen-snyder-9f35dd.netlify.app/
 
 ## Available Scripts
 
-In the project directory, you can run:
+First clone the app then, in the project directory, you can run:
 
-### `npm start`
+### Clone the app
+```bash
+git clone https://github.com/cetinaziz2894/react-online-gambling-app.git
+```
+
+### Install packages
+```bash
+cd react-online-gambling-app
+npm install
+```
+
+### Start the app
+```bash
+npm start
+```
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Test the app
+```bash
+npm test
+```
 
-### `npm test`
+### Test the app
+```bash
+npm test
+```
 
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+
+### Build the app
+```bash
+npm run build
+```
 
 Builds the app for production to the `build` folder.\
 It correctly bundles React in production mode and optimizes the build for the best performance.
@@ -27,39 +52,44 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
 ## Project Overview
 
-The project is to use Javascript to tie together existing HTML and data to create a minimal, working casino website.
+## Used Tecknologies
 
-Basic HTML, CSS, images and JSON data is provided, however, feel free to impress by changing and enhancing any of these parts for an even better experience!
+- ReactJs
+- Redux
+- React Router
+- Semantic UI React
+- Styled-Components
+- JSON Server (https://casino-json-server.herokuapp.com)
 
-Your mission is to provide the Javascript code that makes the parts work as described, below.
-**Feel free to use any other openly available library for validation, templating, dependency injection, etc.**
+## About JSON Server
+This server deployed in the Heroku and ready to use.
 
-## Assignment Criteria
+Available Apis
+GET Users:
+https://casino-json-server.herokuapp.com/users
 
-We want to see how you approach and solve a problem, as well as look at code style and quality.
-Do take your time to do it right, rather than fast.
-Extra effort to improve on the "website" will be noted. :)
+GET Games:
+https://casino-json-server.herokuapp.com/games
 
-While the test is primarily focused on Javascript, by all means use or change the HTML or CSS when that makes sense.
-
-Be prepared to discuss your choices and code when delivered. We would also expect you to answer on how to extend the application to include more features and functionality.
-
-These parts needs all to be completed for the assignment to be complete:
+GET Categories:
+https://casino-json-server.herokuapp.com/categories
 
 ### Login functionality
 
-* Connect the login form to the /login ajax call.
-* On valid username/password, transition to the games list screen.
-* On invalid username/password, provide feedback and allow to try again.
+* On valid username/password
+Login test user info:
+```
+username: test
+password: 1q2w3e
+```
+
+* Login info sets in the localstorage as user and username
 
 ### Log out functionality
 
-* Connect the log out button to the /logout ajax call.
-* On valid log out, transition to login screen with empty input fields.
+* After logout function called localstorage values are deleted.
 
 ### Games list screen
 
@@ -76,14 +106,6 @@ These parts needs all to be completed for the assignment to be complete:
 * Load the selected game via the provided API
 * Provide a way to go back to the Games list screen
 
-### Login
-Will give you player information.
-It is possible to login with three accounts:
-Login test user info:
-```
-username: test
-password: 1q2w3e
-```
 
 ## Loading a game
 
