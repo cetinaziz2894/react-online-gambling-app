@@ -1,5 +1,12 @@
 # Getting Started with React Online Gambling App
 
+
+<img src="https://raw.githubusercontent.com/cetinaziz2894/react-online-gambling-app/master/public/images/readme/image_1.PNG" alt="screenshot-1" style="width:200px;" >
+<img src="https://raw.githubusercontent.com/cetinaziz2894/react-online-gambling-app/master/public/images/readme/image_2.PNG" alt="screenshot-2" style="width:200px;" >
+<img src="https://raw.githubusercontent.com/cetinaziz2894/react-online-gambling-app/master/public/images/readme/image_3.PNG" alt="screenshot-3" style="width:200px;" >
+<img src="https://raw.githubusercontent.com/cetinaziz2894/react-online-gambling-app/master/public/images/readme/image_4.PNG" alt="screenshot-4" style="width:200px;" >
+<img src="https://raw.githubusercontent.com/cetinaziz2894/react-online-gambling-app/master/public/images/readme/image_5.PNG" alt="screenshot-5" style="width:200px;" >
+
 This is a demo project for online casino. In this app you can play games. 
 
 The app link : https://zen-snyder-9f35dd.netlify.app/
@@ -26,11 +33,6 @@ npm start
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-### Test the app
-```bash
-npm test
-```
 
 ### Test the app
 ```bash
